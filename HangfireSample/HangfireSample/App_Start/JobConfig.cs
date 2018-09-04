@@ -24,13 +24,13 @@ namespace HangfireSample.App_Start
             var id = BackgroundJob.Enqueue(() => Console.WriteLine("Hello, "));
             BackgroundJob.ContinueWith(id, () => Console.WriteLine("world!"));
 
-            BackgroundJob.Enqueue(() => TestFail());
+            //BackgroundJob.Enqueue(() => TestFail());
         }
 
-        public static void TestFail()
-        {
-            var i = 0;
-            var result = 1 / i;
-        }
+        //public static void TestFail()
+        //{
+        //    var i = 0;
+        //    var result = 1 / i;
+        //}
     }
 }
